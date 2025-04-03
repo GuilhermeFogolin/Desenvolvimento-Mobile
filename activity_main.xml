@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cores"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:textColor="#0083FF"/>
+
+    <CheckBox
+        android:id="@+id/cbVermelho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vermelho"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textSize="15sp" />
+
+    <CheckBox
+        android:id="@+id/cbVerde"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verde"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textSize="15sp"/>
+
+    <CheckBox
+        android:id="@+id/cbAzul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Azul"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textSize="15sp"/>
+
+    <CheckBox
+        android:id="@+id/cbRosa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rosa"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/textTitulo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleciona uma opção:"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="#0083FF"/>
+
+    <!-- Opcional gerar o id -->
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbOpcao1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opção 01"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+        <RadioButton
+            android:id="@+id/rbOpcao2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opção 02"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+        <RadioButton
+            android:id="@+id/rbOpcao3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opção 03"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+        <RadioButton
+            android:id="@+id/rbOpcao4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opção 04"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#0083FF"
+        android:text="Resultado"
+        android:textAlignment="center"
+        android:padding="10dp"
+        />
+
+    <Button
+        android:id="@+id/btnSet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ENVIAR"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:backgroundTint="#004DFF"
+        android:onClick="enviar"/>
+</LinearLayout>
