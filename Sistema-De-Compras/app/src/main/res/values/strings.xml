@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Sistema-De-Compras</string>
+    <string name="btnMain">CALCULAR TOTAL</string>
+    <string name="fecap"> FECAP - 2025 GUILHERME FOGOLIN </string>
+    <string name="res"> Resultado R$... </string>
+    <string name="title"> LISTA DE COMPRAS </string>
+    <string name="arroz"> Arroz 1kg - R$2.69</string>
+    <string name="leite"> Leite Longa Vida - R$2.70</string>
+    <string name="carne"> Carne Friboi - R$16.70</string>
+    <string name="feijao"> Feijão Carioca 1kg - R$3.38</string>
+    <string name="refri"> Coca-Cola 2L - R$3.00</string>
+    <string name="macarrao"> Macarrão Integral - R$4.50</string>
 </resources>
