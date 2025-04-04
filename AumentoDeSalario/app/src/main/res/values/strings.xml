@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Aumento-De-Salario</string>
+    <string name="btnMain">CALCULAR TOTAL</string>
+    <string name="fecap"> FECAP - 2025 GUILHERME FOGOLIN </string>
+    <string name="title"> AUMENTO DO SALÁRIO </string>
+    <string name="sal"> Digite seu salário (R$) </string>
+    <string name="per"> Qual será o percentual? </string>
+    <string name="rb40"> 40% </string>
+    <string name="rb45"> 45% </string>
+    <string name="rb50"> 50% </string>
 </resources>
