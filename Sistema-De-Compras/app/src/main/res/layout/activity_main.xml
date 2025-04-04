@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/branco"
-    android:onClick="somar"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -40,7 +39,7 @@
         android:id="@+id/view_main1"
         android:layout_width="429dp"
         android:layout_height="8dp"
-        android:background="@color/azul_escuro"
+        android:background="@color/azul_claro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.277"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +59,7 @@
             android:id="@+id/view_main2"
             android:layout_width="429dp"
             android:layout_height="8dp"
-            android:background="@color/azul_escuro" />
+            android:background="@color/azul_claro" />
 
         <TextView
             android:id="@+id/tv_footer"
