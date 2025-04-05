@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Tem-De-Tudo</string>
+
+    <!-- Main -->
+    <string name="btnMain">INICIAR</string>
+    <string name="fecap"> FECAP - 2025 GUILHERME FOGOLIN </string>
+    <string name="descricao_img_main">Logo do aplicativo</string>
+
+    <!-- Cadastro -->
+    <string name="descricao_img_cadastro">Cadastro</string>
+    <string name="btnCadastro">CADASTRAR</string>
+    <string name="hintNome">Digite seu nome: </string>
+    <string name="hintSobrenome">Digite seu sobrenome: </string>
+
 </resources>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnCadastro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cadastro">
+
+    <ImageView
+        android:id="@+id/iv_cadastro"
+        android:layout_width="229dp"
+        android:layout_height="193dp"
+        android:contentDescription="@string/descricao_img_cadastro"
+        android:src="@drawable/cad"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="421dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/verde_escuro"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="-1dp">
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_main1"
+        android:layout_width="429dp"
+        android:layout_height="4dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/cinza_claro"
+        app:layout_constraintBottom_toTopOf="@+id/iv_cadastro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="421dp"
+        android:layout_height="20dp"
+        android:background="@color/verde_escuro"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:id="@+id/view_main2"
+            android:layout_width="429dp"
+            android:layout_height="4dp"
+            android:background="@color/cinza_claro" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_nome"
+        android:layout_width="288dp"
+        android:layout_height="56dp"
+        android:background="@color/verde_claro"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="@string/hintNome"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/cinza_escuro"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_cadastro"
+        app:layout_constraintVertical_bias="0.151" />
+
+    <EditText
+        android:id="@+id/et_sobre"
+        android:layout_width="288dp"
+        android:layout_height="56dp"
+        android:background="@color/verde_claro"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="@string/hintSobrenome"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/cinza_escuro"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_nome" />
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/verde_claro"
+        android:fontFamily="monospace"
+        android:text="@string/btnCadastro"
+        android:textAlignment="center"
+        android:textColor="@color/branco"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.807" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
