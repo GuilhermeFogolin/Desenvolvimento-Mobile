@@ -7,4 +7,119 @@
     android:layout_height="match_parent"
     tools:context=".Final">
 
+    <ImageView
+        android:id="@+id/iv_final"
+        android:layout_width="229dp"
+        android:layout_height="193dp"
+        android:contentDescription="@string/descricao_img_final"
+        android:src="@drawable/check"
+        app:layout_constraintBottom_toTopOf="@+id/btnFechar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="421dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/verde_escuro"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="-1dp">
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_main1"
+        android:layout_width="429dp"
+        android:layout_height="4dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/cinza_claro"
+        app:layout_constraintBottom_toTopOf="@+id/iv_final"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="421dp"
+        android:layout_height="20dp"
+        android:background="@color/verde_escuro"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:id="@+id/view_main2"
+            android:layout_width="429dp"
+            android:layout_height="4dp"
+            android:background="@color/cinza_claro" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnFechar"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/verde_claro"
+        android:fontFamily="monospace"
+        android:text="@string/btnFechar"
+        android:textAlignment="center"
+        android:textColor="@color/branco"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <TextView
+        android:id="@+id/tv_final"
+        android:layout_width="268dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="@string/hintFinal"
+        android:textAlignment="center"
+        android:textColor="@color/verde_escuro"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnFechar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_final"
+        app:layout_constraintVertical_bias="0.223" />
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="392dp"
+        android:layout_height="146dp"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="@string/sucesso"
+        android:textAlignment="center"
+        android:textColor="@color/verde_escuro"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnFechar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_final"
+        app:layout_constraintVertical_bias="0.67" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

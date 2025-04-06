@@ -12,4 +12,10 @@
     <string name="hintNome">Digite seu nome: </string>
     <string name="hintSobrenome">Digite seu sobrenome: </string>
 
+    <!-- Tela final -->
+    <string name="descricao_img_final">Tela final</string>
+    <string name="btnFechar">FECHAR</string>
+    <string name="sucesso">Cadastro realizado com sucesso! Que aproveita a sua jornada ao lado da Tem De Tudo. 😎</string>
+    <string name="hintFinal">""</string>
+
 </resources>
