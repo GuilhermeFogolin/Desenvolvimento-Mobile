@@ -10,9 +10,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="308dp"
-        android:layout_height="184dp"
+        android:layout_width="312dp"
+        android:layout_height="208dp"
         android:layout_marginTop="20dp"
+        android:contentDescription="@string/descricao_img_pedido"
         android:src="@drawable/food"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -46,6 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="421dp"
         android:layout_height="20dp"
         android:background="@color/ver_escuro"
@@ -58,22 +60,25 @@
             android:id="@+id/view_main2"
             android:layout_width="429dp"
             android:layout_height="4dp"
-            android:background="@color/preto"/>
+            android:background="@color/preto" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="418dp"
-        android:layout_height="75dp"
+        android:id="@+id/linearLayout3"
+        android:layout_width="409dp"
+        android:layout_height="72dp"
         android:orientation="horizontal"
         android:padding="8sp"
-        tools:layout_editor_absoluteX="-4dp"
-        tools:layout_editor_absoluteY="238dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <Button
             android:id="@+id/btnBurguer"
             android:layout_width="104dp"
             android:layout_height="match_parent"
+            android:layout_marginRight="5sp"
             android:layout_weight="1"
             android:backgroundTint="@color/ver_claro"
             android:fontFamily="monospace"
@@ -81,31 +86,32 @@
             android:textAlignment="center"
             android:textColor="@color/branco"
             android:textSize="25sp"
-            android:textStyle="bold"
-            android:layout_marginRight="5sp"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnPizza"
             android:layout_width="104dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5sp"
             android:layout_weight="1"
-            android:backgroundTint="@color/ver_claro"
+            android:backgroundTint="@color/ver_escuro"
             android:fontFamily="monospace"
             android:text="@string/btnPizza"
             android:textAlignment="center"
             android:textColor="@color/branco"
             android:textSize="25sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="5sp"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="418dp"
+        android:id="@+id/linearLayout2"
+        android:layout_width="409dp"
         android:layout_height="75dp"
         android:orientation="horizontal"
         android:padding="8sp"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="313dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <Button
             android:id="@+id/btnNachos"
@@ -113,7 +119,7 @@
             android:layout_height="match_parent"
             android:layout_marginRight="5sp"
             android:layout_weight="1"
-            android:backgroundTint="@color/ver_claro"
+            android:backgroundTint="@color/ver_escuro"
             android:fontFamily="monospace"
             android:text="@string/btnNachos"
             android:textAlignment="center"
@@ -137,12 +143,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="418dp"
-        android:layout_height="75dp"
+        android:id="@+id/linearLayout4"
+        android:layout_width="409dp"
+        android:layout_height="76dp"
         android:orientation="horizontal"
         android:padding="8sp"
-        tools:layout_editor_absoluteX="-4dp"
-        tools:layout_editor_absoluteY="388dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <Button
             android:id="@+id/btnBatata"
@@ -164,7 +172,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="5sp"
             android:layout_weight="1"
-            android:backgroundTint="@color/ver_claro"
+            android:backgroundTint="@color/ver_escuro"
             android:fontFamily="monospace"
             android:text="@string/btnSalada"
             android:textAlignment="center"
@@ -174,25 +182,29 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="296dp"
-        android:layout_height="44dp"
-        android:background="@color/hintBack"
+        android:id="@+id/et_nome"
+        android:layout_width="295dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="48dp"
+        android:background="@color/ver_escuro"
         android:ems="10"
         android:fontFamily="monospace"
+        android:hint="@string/hintNome"
         android:inputType="text"
-        android:text="@string/hintNome"
         android:textAlignment="center"
-        android:textColor="@color/hintText"
+        android:textColor="@color/branco"
         android:textSize="25sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="487dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
     <Button
         android:id="@+id/btnPedir"
         android:layout_width="266dp"
         android:layout_height="61dp"
+        android:layout_marginTop="24dp"
         android:layout_weight="1"
         android:backgroundTint="@color/ver_claro"
         android:fontFamily="monospace"
@@ -201,8 +213,12 @@
         android:textColor="@color/branco"
         android:textSize="25sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="565dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_nome"
+        app:layout_constraintVertical_bias="0.147" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,4 +17,9 @@
     <string name="btnBatata">Batata</string>
     <string name="btnSalada">Salada</string>
     <string name="hintNome">Digite seu nome: </string>
+
+    <!-- Resumo -->
+    <string name="descricao_img_resumo"> Pedido pronto </string>
+    <string name="btnVoltar">VOLTAR</string>
+
 </resources>

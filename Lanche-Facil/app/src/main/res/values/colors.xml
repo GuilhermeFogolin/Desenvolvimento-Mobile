@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="branco">#FFFFFFFF</color>
-    <color name="ver_escuro">#F01010</color>
+    <color name="ver_escuro">#BD0505</color>
     <color name="ver_claro">#EB1010</color>
     <color name="cinza">#857979</color>
     <color name="preto">#090909</color>
