@@ -35,7 +35,7 @@ public class ActivityResumo extends AppCompatActivity {
 
         // Impressão dos dados
 
-        tv_nome.setText("Caro(a), " + nome);
+        tv_nome.setText("Caro(a), " + nome + "!");
         tv_pedido.setText("Seu pedido foi: " + pedido + ". Agradecemos a preferência! 🍟");
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
