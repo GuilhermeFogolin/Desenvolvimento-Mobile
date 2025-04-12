@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityPedido"
+    android:background="@color/branco">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="308dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/food"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="421dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/ver_escuro"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="-1dp">
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_main1"
+        android:layout_width="429dp"
+        android:layout_height="4dp"
+        android:background="@color/preto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:layout_width="421dp"
+        android:layout_height="20dp"
+        android:background="@color/ver_escuro"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:id="@+id/view_main2"
+            android:layout_width="429dp"
+            android:layout_height="4dp"
+            android:background="@color/preto"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="418dp"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:padding="8sp"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="238dp">
+
+        <Button
+            android:id="@+id/btnBurguer"
+            android:layout_width="104dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/ver_claro"
+            android:fontFamily="monospace"
+            android:text="@string/btnBurguer"
+            android:textAlignment="center"
+            android:textColor="@color/branco"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginRight="5sp"/>
+
+        <Button
+            android:id="@+id/btnPizza"
+            android:layout_width="104dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/ver_claro"
+            android:fontFamily="monospace"
+            android:text="@string/btnPizza"
+            android:textAlignment="center"
+            android:textColor="@color/branco"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="418dp"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:padding="8sp"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="313dp">
+
+        <Button
+            android:id="@+id/btnNachos"
+            android:layout_width="104dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5sp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/ver_claro"
+            android:fontFamily="monospace"
+            android:text="@string/btnNachos"
+            android:textAlignment="center"
+            android:textColor="@color/branco"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnCostela"
+            android:layout_width="104dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5sp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/ver_claro"
+            android:fontFamily="monospace"
+            android:text="@string/btnCostela"
+            android:textAlignment="center"
+            android:textColor="@color/branco"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="418dp"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:padding="8sp"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="388dp">
+
+        <Button
+            android:id="@+id/btnBatata"
+            android:layout_width="104dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5sp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/ver_claro"
+            android:fontFamily="monospace"
+            android:text="@string/btnBatata"
+            android:textAlignment="center"
+            android:textColor="@color/branco"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnSalada"
+            android:layout_width="104dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5sp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/ver_claro"
+            android:fontFamily="monospace"
+            android:text="@string/btnSalada"
+            android:textAlignment="center"
+            android:textColor="@color/branco"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="296dp"
+        android:layout_height="44dp"
+        android:background="@color/hintBack"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:inputType="text"
+        android:text="@string/hintNome"
+        android:textAlignment="center"
+        android:textColor="@color/hintText"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="487dp" />
+
+    <Button
+        android:id="@+id/btnPedir"
+        android:layout_width="266dp"
+        android:layout_height="61dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/ver_claro"
+        android:fontFamily="monospace"
+        android:text="@string/btnPedir"
+        android:textAlignment="center"
+        android:textColor="@color/branco"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="565dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

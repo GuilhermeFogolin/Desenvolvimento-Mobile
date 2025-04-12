@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Lanche-Facil</string>
+
+    <!-- Main -->
+    <string name="fecap"> FECAP - 2025 GUILHERME FOGOLIN </string>
+    <string name="descricao_img_main">Logo da Lanche Fácil </string>
+    <string name="btnMain">INICIAR PEDIDO</string>
+    <string name="name">Lanche Fácil</string>
+
+    <!-- Pedido -->
+    <string name="descricao_img_pedido">Tela de pedidos</string>
+    <string name="btnPedir">FAZER PEDIDO</string>
+    <string name="btnBurguer">Hambúguer</string>
+    <string name="btnPizza">Pizza</string>
+    <string name="btnNachos">Nachos</string>
+    <string name="btnCostela">Costela</string>
+    <string name="btnBatata">Batata</string>
+    <string name="btnSalada">Salada</string>
+    <string name="hintNome">Digite seu nome: </string>
 </resources>
