@@ -5,15 +5,22 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/branco"
     tools:context=".ActivityResumo">
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="441dp"
-        android:layout_height="323dp"
+        android:layout_width="409dp"
+        android:layout_height="318dp"
+        android:layout_marginBottom="291dp"
         android:src="@drawable/entrega"
-        tools:layout_editor_absoluteX="-15dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:contentDescription="@string/descricao_img_resumo"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.761" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -72,9 +79,41 @@
         android:textColor="@color/branco"
         android:textSize="25sp"
         android:textStyle="bold"
+        android:onClick="voltar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nome"
+        android:layout_width="345dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="@string/tv_nome"
+        android:textAlignment="center"
+        android:textColor="@color/ver_escuro"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/tv_pedido"
+        android:layout_width="355dp"
+        android:layout_height="169dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="monospace"
+        android:text="@string/tv_nome"
+        android:textAlignment="center"
+        android:textColor="@color/ver_escuro"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nome" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
