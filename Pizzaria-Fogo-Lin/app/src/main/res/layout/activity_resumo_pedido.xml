@@ -88,7 +88,7 @@
     <TextView
         android:id="@+id/pizzaIntent"
         android:layout_width="410dp"
-        android:layout_height="220dp"
+        android:layout_height="247dp"
         android:fontFamily="monospace"
         android:text="@string/intentPizza"
         android:textAlignment="center"
@@ -104,8 +104,8 @@
 
     <TextView
         android:id="@+id/tamanhoResumo"
-        android:layout_width="413dp"
-        android:layout_height="48dp"
+        android:layout_width="414dp"
+        android:layout_height="37dp"
         android:fontFamily="monospace"
         android:text="@string/tamanhoResumo"
         android:textAlignment="center"
@@ -121,8 +121,8 @@
 
     <TextView
         android:id="@+id/tamanhoIntent"
-        android:layout_width="413dp"
-        android:layout_height="48dp"
+        android:layout_width="411dp"
+        android:layout_height="75dp"
         android:fontFamily="monospace"
         android:text="@string/intentTamanho"
         android:textAlignment="center"
@@ -138,8 +138,8 @@
 
     <TextView
         android:id="@+id/pagamentoResumo"
-        android:layout_width="413dp"
-        android:layout_height="48dp"
+        android:layout_width="410dp"
+        android:layout_height="40dp"
         android:fontFamily="monospace"
         android:text="@string/pagamentoResumo"
         android:textAlignment="center"
@@ -170,6 +170,40 @@
         app:layout_constraintTop_toBottomOf="@+id/pagamentoResumo"
         app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/valorResumo"
+        android:layout_width="411dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="monospace"
+        android:text="@string/valorResumo"
+        android:textAlignment="center"
+        android:textColor="@color/azul_claro"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamentoIntent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/valorIntent"
+        android:layout_width="413dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="monospace"
+        android:text="@string/intentTamanho"
+        android:textAlignment="center"
+        android:textColor="@color/azul_checkbox"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Button
         android:id="@+id/btnVoltar"
         android:layout_width="342dp"
@@ -189,7 +223,7 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.926" />
+        app:layout_constraintVertical_bias="0.969" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

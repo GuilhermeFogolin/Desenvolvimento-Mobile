@@ -17,8 +17,8 @@
     <!-- TamanhoPagamento -->
     <string name="tamanho">Selecione o tamanho da pizza: </string>
     <string name="pequena">Pequena</string>
-    <string name="media">Média: + R$6.00</string>
-    <string name="grande">Grande: + R$8.00</string>
+    <string name="media">Média</string>
+    <string name="grande">Grande</string>
     <string name="pagamento">Selecione o método de pagamento: </string>
     <string name="cartao">Cartão</string>
     <string name="dinheiro">Dinheiro</string>
@@ -33,6 +33,8 @@
     <string name="intentTamanho">""</string>
     <string name="pagamentoResumo">Forma de pagamento:</string>
     <string name="intentPagamento">""</string>
+    <string name="valorResumo">"Valor total: "</string>
+    <string name="intentValor">""</string>
     <string name="btnVoltar">FAZER NOVO PEDIDO</string>
 
 

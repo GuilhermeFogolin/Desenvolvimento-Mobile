@@ -15,8 +15,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Seletor extends AppCompatActivity {
 
@@ -41,14 +41,12 @@ public class Seletor extends AppCompatActivity {
         cbChocolate = findViewById(R.id.cbChocolate);
 
         btnContinuar = findViewById(R.id.btnContinuar);
-        btnContinuar.setEnabled(false); // Inicialmente desabilitado, até selecionar a pizza.
 
-        // Configurando o clique do botão e checkboxes:
+        // Configurando o clique dos checkboxes:
 
         CompoundButton.OnCheckedChangeListener listener = new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                verificarSelecao();
             }
         };
 
@@ -64,13 +62,13 @@ public class Seletor extends AppCompatActivity {
         btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                List<String> saboresSelecionados = obterSaboresSelecionados();
-                if (!saboresSelecionados.isEmpty()) {
-                    Intent intent = new Intent(Seletor.this, TamanhoPagamento.class);
-                    intent.putStringArrayListExtra("sabores", (ArrayList<String>) saboresSelecionados);
-                    startActivity(intent);
-                } else {
+                if (nenhumCheckBoxSelecionado()) {
                     Toast.makeText(Seletor.this, "Selecione pelo menos um sabor de pizza! 🍕", Toast.LENGTH_SHORT).show();
+                } else {
+                    Map<String, String> saboresSelecionadosComPreco = obterSaboresSelecionadosComPreco();
+                    Intent intent = new Intent(Seletor.this, TamanhoPagamento.class);
+                    intent.putExtra("sabores_com_preco", (HashMap<String, String>) saboresSelecionadosComPreco);
+                    startActivity(intent);
                 }
             }
         });
@@ -118,37 +116,33 @@ public class Seletor extends AppCompatActivity {
         Log.i("Ciclo de Vida", "Tela seletor - onStart");
     }
 
-    // Validando se alguma pizza foi selecionada.
-    private void verificarSelecao() {
-        if (cbCalabresa.isChecked() || cbMarguerita.isChecked() || cbQueijo.isChecked() ||
-                cbPortuguesa.isChecked() || cbFrango.isChecked() || cbChocolate.isChecked()) {
-            btnContinuar.setEnabled(true);
-        } else {
-            btnContinuar.setEnabled(false);
-        }
+    // Verifica se nenhum CheckBox está selecionado
+    private boolean nenhumCheckBoxSelecionado() {
+        return !cbCalabresa.isChecked() && !cbMarguerita.isChecked() && !cbQueijo.isChecked() &&
+                !cbPortuguesa.isChecked() && !cbFrango.isChecked() && !cbChocolate.isChecked();
     }
 
-    // Adicionando os sabores selecionados em uma lista
-    private List<String> obterSaboresSelecionados() {
-        List<String> selecionados = new ArrayList<>();
+    // Adicionando os sabores selecionados em um mapa com nome e preço
+    private Map<String, String> obterSaboresSelecionadosComPreco() {
+        Map<String, String> selecionadosComPreco = new HashMap<>();
         if (cbCalabresa.isChecked()) {
-            selecionados.add(cbCalabresa.getText().toString());
+            selecionadosComPreco.put("Calabresa", "29.90");
         }
         if (cbMarguerita.isChecked()) {
-            selecionados.add(cbMarguerita.getText().toString());
+            selecionadosComPreco.put("Cinco queijos", "45.99");
         }
         if (cbQueijo.isChecked()) {
-            selecionados.add(cbQueijo.getText().toString());
+            selecionadosComPreco.put("Frango com catupiry", "37.99");
         }
         if (cbPortuguesa.isChecked()) {
-            selecionados.add(cbPortuguesa.getText().toString());
+            selecionadosComPreco.put("Marguerita", "32.50");
         }
         if (cbFrango.isChecked()) {
-            selecionados.add(cbFrango.getText().toString());
+            selecionadosComPreco.put("Portuguesa", "38.45");
         }
         if (cbChocolate.isChecked()) {
-            selecionados.add(cbChocolate.getText().toString());
+            selecionadosComPreco.put("Chocolate", "50.00");
         }
-        return selecionados;
+        return selecionadosComPreco;
     }
 }

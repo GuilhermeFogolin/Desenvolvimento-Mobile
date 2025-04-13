@@ -15,14 +15,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TamanhoPagamento extends AppCompatActivity {
 
     private RadioGroup rgTamanho, rgPagamento;
     private Button btnFinalizar;
-
-    private ArrayList<String> saboresEscolhidos;
+    private Map<String, String> saboresEscolhidos;
+    private String tamanhoSelecionado;
+    private double precoTamanhoSelecionado;
+    private String pagamentoSelecionado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +41,17 @@ public class TamanhoPagamento extends AppCompatActivity {
         rgPagamento = findViewById(R.id.rgPagamento);
         btnFinalizar = findViewById(R.id.btnFinalizar);
 
-        // Recuperando os sabores selecionados da tela anterior
-        saboresEscolhidos = getIntent().getStringArrayListExtra("sabores");
+        // Recupera os sabores com seus preços da tela anterior
+        saboresEscolhidos = (HashMap<String, String>) getIntent().getSerializableExtra("sabores_com_preco");
 
-        // Configurando o clique do botão
+        // Configura a seleção de tamanho
+        configurarSelecaoTamanho();
 
-        finalizarPedido();
+        // Configura a seleção de pagamento
+        configurarSelecaoPagamento();
+
+        // Botão para finalizar o pedido
+        configurarBotaoFinalizar();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -88,41 +96,48 @@ public class TamanhoPagamento extends AppCompatActivity {
         Log.i("Ciclo de Vida", "Tela TamanhoPagamento - onStart");
     }
 
-    public void finalizarPedido() {
+    public void configurarSelecaoTamanho() {
+        rgTamanho.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton radioButton = findViewById(checkedId);
+                if (radioButton != null) {
+                    tamanhoSelecionado = radioButton.getText().toString();
+                } else {
+                    tamanhoSelecionado = null;
+                }
+            }
+        });
+    }
+    public void configurarSelecaoPagamento() {
+        rgPagamento.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton radioButton = findViewById(checkedId);
+                if (radioButton != null) {
+                    pagamentoSelecionado = radioButton.getText().toString();
+                } else {
+                    pagamentoSelecionado = null;
+                }
+            }
+        });
+    }
 
+    public void configurarBotaoFinalizar() {
         btnFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String tamanho = recuperandoTamanho();
-                String pagamento = recuperandoPagamento();
-
-                if (tamanho != null && pagamento != null) {
+                if (tamanhoSelecionado != null && pagamentoSelecionado != null) {
                     Intent intent = new Intent(TamanhoPagamento.this, ResumoPedido.class);
-                    intent.putStringArrayListExtra("sabores", saboresEscolhidos);
-                    intent.putExtra("tamanho", tamanho);
-                    intent.putExtra("pagamento", pagamento);
+                    intent.putExtra("sabores_com_preco", (HashMap<String, String>) saboresEscolhidos);
+                    intent.putExtra("tamanho", tamanhoSelecionado);
+                    intent.putExtra("preco_tamanho", precoTamanhoSelecionado);
+                    intent.putExtra("pagamento", pagamentoSelecionado);
                     startActivity(intent);
                 } else {
                     Toast.makeText(TamanhoPagamento.this, "Selecione o tamanho da pizza e a forma de pagamento! 😋", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-    }
-
-    private String recuperandoTamanho() {
-        int selectedId = rgTamanho.getCheckedRadioButtonId();
-        if (selectedId != -1) {
-            RadioButton radioButton = findViewById(selectedId);
-            return radioButton.getText().toString();
-        }
-        return null;
-    }
-    private String recuperandoPagamento() {
-        int selectedId = rgPagamento.getCheckedRadioButtonId();
-        if (selectedId != -1) {
-            RadioButton radioButton = findViewById(selectedId);
-            return radioButton.getText().toString();
-        }
-        return null;
     }
 }
