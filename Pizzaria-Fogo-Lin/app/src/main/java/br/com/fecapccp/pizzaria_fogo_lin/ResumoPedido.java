@@ -78,7 +78,8 @@ public class ResumoPedido extends AppCompatActivity {
                 valorTotal += Double.parseDouble(precoStr);
             }
         }
-        valorIntent.setText("Valor Total: R$" + String.format("%.2f", valorTotal));
+        valorTotal += precoTamanho;
+        valorIntent.setText("R$" + String.format("%.2f", valorTotal));
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -122,7 +123,6 @@ public class ResumoPedido extends AppCompatActivity {
         super.onStart();
         Log.i("Ciclo de Vida", "Tela ResumoPedido - onStart");
     }
-
     public void voltar(View v) {
         Intent intent = new Intent(ResumoPedido.this, Seletor.class);
         startActivity(intent);

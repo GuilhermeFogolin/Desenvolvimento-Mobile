@@ -95,7 +95,6 @@ public class TamanhoPagamento extends AppCompatActivity {
         super.onStart();
         Log.i("Ciclo de Vida", "Tela TamanhoPagamento - onStart");
     }
-
     public void configurarSelecaoTamanho() {
         rgTamanho.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -103,6 +102,22 @@ public class TamanhoPagamento extends AppCompatActivity {
                 RadioButton radioButton = findViewById(checkedId);
                 if (radioButton != null) {
                     tamanhoSelecionado = radioButton.getText().toString();
+
+                    // Definindo o preço com base no tamanho
+                    switch (tamanhoSelecionado) {
+                        case "Pequena":
+                            precoTamanhoSelecionado = 10.00;
+                            break;
+                        case "Média":
+                            precoTamanhoSelecionado = 15.00;
+                            break;
+                        case "Grande":
+                            precoTamanhoSelecionado = 20.00;
+                            break;
+                        default:
+                            precoTamanhoSelecionado = 0.00;
+                            break;
+                    }
                 } else {
                     tamanhoSelecionado = null;
                 }
@@ -122,7 +137,6 @@ public class TamanhoPagamento extends AppCompatActivity {
             }
         });
     }
-
     public void configurarBotaoFinalizar() {
         btnFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override

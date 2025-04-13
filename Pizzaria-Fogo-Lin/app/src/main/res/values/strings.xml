@@ -19,6 +19,7 @@
     <string name="pequena">Pequena</string>
     <string name="media">Média</string>
     <string name="grande">Grande</string>
+    <string name="legenda">Pequena: +R$10 | Média: +R$15 | Grande: +R$20</string>
     <string name="pagamento">Selecione o método de pagamento: </string>
     <string name="cartao">Cartão</string>
     <string name="dinheiro">Dinheiro</string>

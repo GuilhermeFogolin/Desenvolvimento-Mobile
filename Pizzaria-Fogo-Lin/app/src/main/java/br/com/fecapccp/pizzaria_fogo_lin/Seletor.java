@@ -129,16 +129,16 @@ public class Seletor extends AppCompatActivity {
             selecionadosComPreco.put("Calabresa", "29.90");
         }
         if (cbMarguerita.isChecked()) {
-            selecionadosComPreco.put("Cinco queijos", "45.99");
-        }
-        if (cbQueijo.isChecked()) {
-            selecionadosComPreco.put("Frango com catupiry", "37.99");
-        }
-        if (cbPortuguesa.isChecked()) {
             selecionadosComPreco.put("Marguerita", "32.50");
         }
-        if (cbFrango.isChecked()) {
+        if (cbQueijo.isChecked()) {
+            selecionadosComPreco.put("Cinco queijos", "45.99");
+        }
+        if (cbPortuguesa.isChecked()) {
             selecionadosComPreco.put("Portuguesa", "38.45");
+        }
+        if (cbFrango.isChecked()) {
+            selecionadosComPreco.put("Frango com catupiry", "37.99");
         }
         if (cbChocolate.isChecked()) {
             selecionadosComPreco.put("Chocolate", "50.00");

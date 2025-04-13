@@ -87,8 +87,8 @@
 
     <TextView
         android:id="@+id/pizzaIntent"
-        android:layout_width="410dp"
-        android:layout_height="247dp"
+        android:layout_width="407dp"
+        android:layout_height="270dp"
         android:fontFamily="monospace"
         android:text="@string/intentPizza"
         android:textAlignment="center"

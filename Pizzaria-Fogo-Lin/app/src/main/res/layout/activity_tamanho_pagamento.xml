@@ -7,6 +7,22 @@
     android:layout_height="match_parent"
     tools:context=".TamanhoPagamento">
 
+    <TextView
+        android:id="@+id/tamanho4"
+        android:layout_width="411dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="252dp"
+        android:fontFamily="monospace"
+        android:text="@string/legenda"
+        android:textAlignment="center"
+        android:textColor="@color/azul_claro"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_main1" />
+
     <Button
         android:id="@+id/btnFinalizar"
         android:layout_width="268dp"
@@ -42,7 +58,7 @@
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rgTamanho"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.302" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -148,14 +164,14 @@
 
     <RadioGroup
         android:id="@+id/rgPagamento"
-        android:layout_width="411dp"
-        android:layout_height="167dp"
+        android:layout_width="410dp"
+        android:layout_height="155dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tamanho2"
-        app:layout_constraintVertical_bias="0.182">
+        app:layout_constraintVertical_bias="0.121">
 
 
         <RadioButton
