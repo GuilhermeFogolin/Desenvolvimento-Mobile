@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="branco">#FFFFFF</color>
+    <color name="preto">#000000</color>
+    <color name="azul_escuro">#037AFF</color>
+    <color name="azul_claro">#50ADFF</color>
+    <color name="cinza_escuro">#4D4D4D</color>
+    <color name="azul_checkbox">#1750D7</color>
+</resources>

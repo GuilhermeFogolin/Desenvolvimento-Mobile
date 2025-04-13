@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="app_name">Pizzaria-Fogo-Lin</string>
+    <string name="fecap"> FECAP - 2025 GUILHERME FOGOLIN </string>
+
+    <!-- Seletor -->
+    <string name="title">Pizzaria Fogo-Lin</string>
+    <string name="selecione">Selecione qual pizza deseja: </string>
+    <string name="calabresa">Calabresa R$29.90</string>
+    <string name="queijo">Cinco queijos R$45.99</string>
+    <string name="frango">Frango com catupiry R$37.99</string>
+    <string name="marguerita">Marguerita R$32.50</string>
+    <string name="portuguesa">Portuguesa R$38.45</string>
+    <string name="chocolate">Chocolate R$50.00</string>
+    <string name="btnContinuar">CONTINUAR</string>
+
+    <!-- TamanhoPagamento -->
+    <string name="tamanho">Selecione o tamanho da pizza: </string>
+    <string name="pequena">Pequena</string>
+    <string name="media">Média: + R$6.00</string>
+    <string name="grande">Grande: + R$8.00</string>
+    <string name="pagamento">Selecione o método de pagamento: </string>
+    <string name="cartao">Cartão</string>
+    <string name="dinheiro">Dinheiro</string>
+    <string name="pix">Pix</string>
+
+</resources>
