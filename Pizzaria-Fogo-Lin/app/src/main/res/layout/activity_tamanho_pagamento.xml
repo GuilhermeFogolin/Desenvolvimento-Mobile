@@ -7,6 +7,43 @@
     android:layout_height="match_parent"
     tools:context=".TamanhoPagamento">
 
+    <Button
+        android:id="@+id/btnFinalizar"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/azul_claro"
+        android:fontFamily="monospace"
+        android:padding="10dp"
+        android:text="@string/btnFinalizar"
+        android:textAlignment="center"
+        android:textColor="@color/branco"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgPagamento"
+        app:layout_constraintVertical_bias="0.717" />
+
+    <TextView
+        android:id="@+id/tamanho2"
+        android:layout_width="414dp"
+        android:layout_height="66dp"
+        android:fontFamily="monospace"
+        android:text="@string/pagamento"
+        android:textAlignment="center"
+        android:textColor="@color/azul_claro"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgTamanho"
+        app:layout_constraintVertical_bias="0.075" />
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="421dp"
@@ -68,28 +105,90 @@
         app:layout_constraintTop_toTopOf="@+id/view_main1" />
 
     <RadioGroup
+        android:id="@+id/rgTamanho"
         android:layout_width="411dp"
-        android:layout_height="134dp"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="106dp">
+        android:layout_height="155dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tamanho"
+        app:layout_constraintVertical_bias="0.024">
 
         <RadioButton
             android:id="@+id/rbPequena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:fontFamily="monospace"
+            android:text="@string/pequena"
+            android:textColor="@color/azul_checkbox"
+            android:textSize="21sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/rbMedia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:fontFamily="monospace"
+            android:text="@string/media"
+            android:textColor="@color/azul_checkbox"
+            android:textSize="21sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/rbGrande"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:fontFamily="monospace"
+            android:text="@string/grande"
+            android:textColor="@color/azul_checkbox"
+            android:textSize="21sp"
+            android:textStyle="bold" />
     </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgPagamento"
+        android:layout_width="411dp"
+        android:layout_height="167dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tamanho2"
+        app:layout_constraintVertical_bias="0.182">
+
+
+        <RadioButton
+            android:id="@+id/rbCartao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="@string/cartao"
+            android:textColor="@color/azul_checkbox"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbPix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="@string/pix"
+            android:textColor="@color/azul_checkbox"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbDinheiro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="@string/dinheiro"
+            android:textColor="@color/azul_checkbox"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

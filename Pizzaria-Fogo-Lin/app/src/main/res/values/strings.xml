@@ -23,5 +23,17 @@
     <string name="cartao">Cartão</string>
     <string name="dinheiro">Dinheiro</string>
     <string name="pix">Pix</string>
+    <string name="btnFinalizar">FINALIZAR</string>
+
+    <!-- Resumo -->
+    <string name="resumo">Resumo do pedido</string>
+    <string name="itens">Itens: </string>
+    <string name="intentPizza">""</string>
+    <string name="tamanhoResumo">Tamanho:</string>
+    <string name="intentTamanho">""</string>
+    <string name="pagamentoResumo">Forma de pagamento:</string>
+    <string name="intentPagamento">""</string>
+    <string name="btnVoltar">FAZER NOVO PEDIDO</string>
+
 
 </resources>
